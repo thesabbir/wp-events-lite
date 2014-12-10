@@ -54,8 +54,8 @@ function my_taxonomies_event() {
 
     $labels = array(
         'name'              => _x( 'Event Categories', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Event Category', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Event Categories' ),
+        'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Event by Category' ),
         'all_items'         => __( 'All Event Categories' ),
         'parent_item'       => __( 'Parent Event Category' ),
         'parent_item_colon' => __( 'Parent Event Category:' ),
@@ -63,7 +63,7 @@ function my_taxonomies_event() {
         'update_item'       => __( 'Update Event Category' ),
         'add_new_item'      => __( 'Add New Event Category' ),
         'new_item_name'     => __( 'New Event Category' ),
-        'menu_name'         => __( 'Event Categories' ),
+        'menu_name'         => __( 'Categories' ),
     );
 
     $args   = array(
