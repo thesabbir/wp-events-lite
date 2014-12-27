@@ -4,7 +4,7 @@
 Plugin Name: Events Lite
 Plugin URI: https://github.com/thesabbir/wp-events-lite
 Description: Light weight event posting plugin.
-Version: 1.0
+Version: 1.1
 Author: Sabbir Ahmed
 Author URI: http://twitter.com/alreadysabbir
 License: GPLv2 or Later
@@ -40,13 +40,13 @@ function in_custom_event() {
         'menu_position'      => 5,
         'menu_icon'          => '',
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'events' ),
+        'rewrite'            => array( 'slug' => 'els' ),
         'has_archive'        => true,
         'hierarchical'       => false,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
     );
 
-    register_post_type( 'event', $args );
+    register_post_type( 'el', $args );
 
 }
 
@@ -71,7 +71,7 @@ function my_taxonomies_event() {
         'hierarchical' => true,
     );
 
-    register_taxonomy( 'event_category', 'event', $args );
+    register_taxonomy( 'elc', 'el', $args );
 
 }
 
@@ -79,7 +79,7 @@ function my_taxonomies_event() {
 function add_menu_icons_styles(){
     ?>
     <style>
-        #adminmenu .menu-icon-event div.wp-menu-image:before {
+        #adminmenu .menu-icon-el div.wp-menu-image:before {
             content: '\f145';
         }
     </style>
